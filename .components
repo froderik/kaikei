@@ -1,0 +1,7 @@
+--- 
+:orm: couchrest
+:test: rspec
+:mock: none
+:script: jquery
+:renderer: haml
+:stylesheet: sass
