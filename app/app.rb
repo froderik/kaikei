@@ -1,3 +1,5 @@
+require 'omniauth'
+
 class Kaikei < Padrino::Application
   register SassInitializer
   register Padrino::Rendering
@@ -5,6 +7,10 @@ class Kaikei < Padrino::Application
   register Padrino::Helpers
 
   enable :sessions
+  
+  use Rack::Session::Cookie
+  use OmniAuth::Strategies::Developer
+  
 
   ##
   # Caching support

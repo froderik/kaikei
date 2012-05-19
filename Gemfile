@@ -22,6 +22,9 @@ gem 'autotest-standalone', :group => "test"
 # Padrino Stable Gem
 gem 'padrino', '0.10.6'
 
+# auth
+gem 'omniauth'
+
 # Or Padrino Edge
 # gem 'padrino', :git => 'git://github.com/padrino/padrino-framework.git'
 
