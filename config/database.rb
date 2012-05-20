@@ -4,10 +4,13 @@ case Padrino.env
   when :test        then db_name = 'kaikei_test'
 end
 
-CouchRest::Model::Base.configure do |conf|
-  conf.model_type_key = 'type' # compatibility with CouchModel 1.1
-  conf.database = CouchRest.database!(db_name)
-  conf.environment = Padrino.env
+CouchPotato::Config.database_name = db_name
+
+
+#CouchRest::Model::Base.configure do |conf|
+#  conf.model_type_key = 'type' # compatibility with CouchModel 1.1
+#  conf.database = CouchRest.database!(db_name)
+#  conf.environment = Padrino.env
   # conf.connection = {
   #   :protocol => 'http',
   #   :host     => 'localhost',
@@ -18,4 +21,4 @@ CouchRest::Model::Base.configure do |conf|
   #   :username => nil,
   #   :password => nil
   # }
-end
+#end

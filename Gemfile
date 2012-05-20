@@ -12,7 +12,7 @@ gem 'sinatra-flash', :require => 'sinatra/flash'
 gem 'sass'
 gem 'haml'
 gem 'json_pure'
-gem 'couchrest_model', "~>1.1.0"
+gem 'couch_potato'
 
 # Test requirements
 gem 'rspec', :group => "test"

@@ -1,7 +1,7 @@
 Kaikei.controllers :auth do
   
   post [:developer, :callback] do
-    session[:user] = User.find_or_create_from auth_hash
+    session[:user] = find_or_create_user_from_auth_hash
     redirect "/"
   end
   

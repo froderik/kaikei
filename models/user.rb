@@ -1,11 +1,7 @@
-class User < CouchRest::Model::Base
-  unique_id :id
-  property :email
+class User
+  include CouchPotato::Persistence
+
+  property :email, :type => String
   
-  def User::find_or_create_from auth_hash
-    user = User.new
-    user.email = auth_hash[:info][:email]
-    user
-  end
-  
+  view :by_email, :key => :email
 end
