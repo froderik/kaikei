@@ -4,6 +4,7 @@ Kaikei.controllers '/' do
     render 'heart/index', :layout => 'layout'
   end
   
+  
   # get :index, :map => "/foo/bar" do
   #   session[:foo] = "bar"
   #   render 'index'

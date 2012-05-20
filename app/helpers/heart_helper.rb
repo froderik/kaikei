@@ -5,4 +5,11 @@ Kaikei.helpers do
   #  ...
   # end
   
+  def create_user email
+    user = User.new
+    user.email = email
+    user
+  end
+  
+  
 end

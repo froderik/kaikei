@@ -1,2 +1,6 @@
-.sign_in
+- if session[:user]
+  = "hi #{session[:user].email} - yay"
+- else
+  .sign_in
+    sign in
     

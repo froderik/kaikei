@@ -9,7 +9,7 @@ class Kaikei < Padrino::Application
   enable :sessions
   
   use Rack::Session::Cookie
-  use OmniAuth::Strategies::Developer
+  use OmniAuth::Strategies::Developer unless Padrino.env == :production
   
 
   ##
