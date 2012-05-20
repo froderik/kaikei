@@ -4,4 +4,9 @@ Kaikei.helpers do
   # def simple_helper_method
   #  ...
   # end
+  
+  def auth_hash
+    request.env['omniauth.auth']
+  end
+  
 end

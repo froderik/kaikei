@@ -2,10 +2,12 @@ require 'spec_helper'
 
 describe "AuthController" do
   before do
-    get "/"
+    post "/auth/developer/callback", {:email => "foo.bar@example.com", :name => "Foo Bar"}
   end
 
-  it "returns hello world" do
-    last_response.body.should == "Hello World"
+  it "should show email address" do
+    follow_redirect!
+    last_response.should be_ok
+    last_response.body.should =~ /foo.bar@example.com/
   end
 end

@@ -1,9 +1,10 @@
 Kaikei.controllers :auth do
   
   post [:developer, :callback] do
-    session[:user] = create_user "fredrik@eldfluga.se"
+    session[:user] = User.find_or_create_from auth_hash
     redirect "/"
   end
+  
   
   # get :index, :map => "/foo/bar" do
   #   session[:foo] = "bar"
