@@ -6,9 +6,10 @@ describe "AuthController" do
   end
 
   it "should show email address" do
-    #last_response["Location"].should == '/'
     follow_redirect!
     last_response.should be_ok
     last_response.body.should =~ /foo.bar@example.com/
+    last_request.url == '/'
+    last_request.session[:user].email.should == 'foo.bar@example.com'
   end
 end
