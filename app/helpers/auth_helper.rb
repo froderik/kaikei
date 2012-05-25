@@ -21,9 +21,9 @@ Kaikei.helpers do
     request.env['omniauth.auth']
   end
   
-  def user
+  def current_user
     session[:user]
   end
   
-  alias :signed_in? :user 
+  alias :signed_in? :current_user 
 end
