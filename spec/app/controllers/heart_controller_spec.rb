@@ -8,4 +8,8 @@ describe "HeartController" do
   it "returns kaikei" do
     last_response.body.should =~ /kaikei/
   end
+  
+  it "should not show sign out when not signed in" do
+    last_response.body.should_not =~ /sign out/
+  end
 end

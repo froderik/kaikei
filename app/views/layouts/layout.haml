@@ -1,5 +1,6 @@
 %h1 
   kaikei
-= link_to 'sign out', '/sign_out'
+- if signed_in?
+  = link_to 'sign out', '/sign_out'
   
 = yield
