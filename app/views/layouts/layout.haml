@@ -1,6 +1,9 @@
 %h1 
   kaikei
 - if signed_in?
+  signed in as 
+  = current_user.email
+  &middot
   = link_to 'sign out', '/sign_out'
   
 = yield
