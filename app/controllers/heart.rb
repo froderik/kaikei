@@ -4,6 +4,10 @@ Kaikei.controllers '/' do
     render 'heart/index', :layout => 'layout'
   end
   
+  get :sign_out do
+    session[:user] = nil
+    redirect '/'
+  end
   
   # get :index, :map => "/foo/bar" do
   #   session[:foo] = "bar"

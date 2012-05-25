@@ -12,4 +12,12 @@ describe "AuthController" do
     last_request.url == '/'
     last_request.session[:user].email.should == 'foo.bar@example.com'
   end
+  
+  it "should sign me out" do
+    get '/sign_out'
+    follow_redirect!
+    last_response.should be_ok
+    last_request.url == '/'
+    last_request.session[:user].should == nil
+  end
 end
