@@ -5,20 +5,11 @@ case Padrino.env
 end
 
 CouchPotato::Config.database_name = db_name
+# or CouchPotato::Config.database_name = http://<host>:<port>/db_name
+# or CouchPotato::Config.database_name = http://<username>:<password>@<host>:<port>/db_name
 
+# language for design documents - defaulting to :javascript
+# CouchPotato::Config.default_language = :erlang
 
-#CouchRest::Model::Base.configure do |conf|
-#  conf.model_type_key = 'type' # compatibility with CouchModel 1.1
-#  conf.database = CouchRest.database!(db_name)
-#  conf.environment = Padrino.env
-  # conf.connection = {
-  #   :protocol => 'http',
-  #   :host     => 'localhost',
-  #   :port     => '5984',
-  #   :prefix   => 'padrino',
-  #   :suffix   => nil,
-  #   :join     => '_',
-  #   :username => nil,
-  #   :password => nil
-  # }
-#end
+# views in own design documents - defaulting to false
+# CouchPotato::Config.split_design_documents_per_view = true
