@@ -1,8 +1,32 @@
 body {
-  background-image: url("/images/money.jpg"); }
+  background-image: url("/images/money.jpg");
+  background-attachment: fixed;
+  background-position: center; }
 
 .container {
-  background: white;
+  background: #FAFAFF;
+  color: #000130;
   margin: 5em;
+}
+
+.header {
   padding: 5em;
-  border-radius: 5em; }
+  background-color: #E6E7FF;
+  border-bottom-style: solid;
+  border-bottom-width: 1em;
+  border-top-left-radius: 1em;
+}
+
+.content {
+  padding: 5em;  
+}
+
+a {
+  color: #443300;
+  text-decoration: none; }
+
+a:visited {
+  color: #726F65; }
+
+a:hover {
+  color: #484850; }
