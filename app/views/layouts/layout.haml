@@ -1,9 +1,15 @@
-%h1 
-  kaikei
-- if signed_in?
-  signed in as 
-  = current_user.email
-  &middot
-  = link_to 'sign out', '/sign_out'
-  
-= yield
+%html
+  %head
+    = stylesheet_link_tag 'core'
+  %body
+    .container
+      %h1 
+        kaikei 
+      - if signed_in?
+        signed in as 
+        = current_user.email
+        &middot
+        = link_to 'sign out', '/sign_out'
+   
+      = yield
+    
