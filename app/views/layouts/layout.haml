@@ -1,16 +1,20 @@
 %html
   %head
     = stylesheet_link_tag 'core'
+    = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Press+Start+2P'
   %body
     .container
       .header
-        %h1 
-          kaikei 
         - if signed_in?
-          signed in as 
-          = current_user.email
-          &middot
-          = link_to 'sign out', '/sign_out'
+          .top_right
+            signed in as 
+            = current_user.email
+            &middot
+            = link_to 'sign out', '/sign_out'
+        .logo 
+          kaikei 
+        .puff
+          simplified bookkeeping
       .content     
         = yield
     

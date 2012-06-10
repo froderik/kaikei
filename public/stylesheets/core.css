@@ -4,22 +4,33 @@ body {
   background-position: center; }
 
 .container {
-  background: #FAFAFF;
+  background-color: #E6E7FF;
   color: #000130;
-  margin: 5em;
-}
+  margin: 10em;
+  padding-left: 5em;
+  padding-right: 5em;
+  border-radius: 2em; }
 
 .header {
-  padding: 5em;
-  background-color: #E6E7FF;
-  border-bottom-style: solid;
-  border-bottom-width: 1em;
-  border-top-left-radius: 1em;
-}
+  border-bottom: solid;
+  padding: 2em; }
+
+.logo {
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+  font-size: 700%;
+  margin-top: 0.5em; }
+
+.puff {
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+  font-size: 130%; }
+
+.top_right {
+  text-align: right; }
 
 .content {
-  padding: 5em;  
-}
+  padding: 2em; }
 
 a {
   color: #443300;
