@@ -1,7 +1,8 @@
 body {
   background-image: url("/images/money.jpg");
   background-attachment: fixed;
-  background-position: center; }
+  background-position: center;
+  font-family: 'Cagliostro'; }
 
 .container {
   background-color: #E6E7FF;
@@ -13,7 +14,9 @@ body {
 
 .header {
   border-bottom: solid;
-  padding: 2em; }
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 2em; }
 
 .logo {
   font-family: 'Press Start 2P', cursive;
@@ -25,6 +28,10 @@ body {
   font-family: 'Press Start 2P', cursive;
   text-align: center;
   font-size: 130%; }
+
+.menu {
+  text-align: center;
+  padding: 1em; }
 
 .top_right {
   text-align: right; }

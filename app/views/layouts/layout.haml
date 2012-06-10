@@ -2,6 +2,7 @@
   %head
     = stylesheet_link_tag 'core'
     = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Press+Start+2P'
+    = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Cagliostro'
   %body
     .container
       .header
@@ -15,6 +16,15 @@
           kaikei 
         .puff
           simplified bookkeeping
+        - if signed_in?
+          .menu
+            = link_to 'bookkeeping', '/bookkeeping'
+            &middot;
+            ledger
+            &middot;
+            balance sheet
+            &middot;
+            statement
       .content     
         = yield
     
